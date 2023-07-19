@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-mongoose.connect("mongodb://127.0.0.1:27017/Login-Register").then(() => {
+mongoose.connect(`${process.env.DATABASE}/Login-Register`).then(() => {
     console.log("Connected to MongoDb succesfully")
 }).catch((err) => {
     console.log(`Your error is ${err}`);
