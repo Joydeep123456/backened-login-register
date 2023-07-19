@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 import mongoose from "mongoose"
 import sendEmail from "./controllers/emailController.js"
-const PORT=process.env.PORT;
+const PORT=process.env.PORT||9002;
 
 
 const app = express()
